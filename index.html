@@ -31,6 +31,50 @@
       type="image/png"
       href="img/MaterialSymbolsSdkOutlineRounded.png"
     />
+    <style>
+      body{
+        background: hsl(161.08 100% 48%);
+        font-family: Georgia, 'Times New Roman', Times,sans-serif ;
+      }
+      h1{
+        color: hsl(22, 87%, 54%);
+        font-family: monospace;
+        /*border-width: 3px;
+        border-style: solid;
+        border-color: currentColor ;*/
+      }
+      .link{
+        color: rgb(255, 0, 0);
+      }
+
+      .link:hover{
+        color: hsl(318, 76%, 45%);
+        outline: 3px solid red;
+      }
+
+      .link:active{
+        outline: 5px solid blue;
+      }
+
+      a{
+        color: rgb(0, 255, 0);
+      }
+      #show{
+        background: blue;
+        color: #fff;
+        border: 0;
+
+      }
+
+      li:first-child{
+        color: rgb(230, 114, 181);
+
+      }
+
+      li:last-child{
+        color: purple;
+      }
+    </style>
   </head>
   <body>
     <!--
@@ -42,14 +86,31 @@
       <h1>Este es mi portafolio</h1>
 
       <nav>
-        <a href="#experiencia">Experiencia</a>
-        <a href="#proyectos">Proyectos</a>
-        <a href="https://github.com/NestorValencia" target="_blank" rel="noreferrel">Mi GitHub</a><!--enlaces internos-->
+        <a class="link" href="#experiencia">Experiencia</a>
+        <a class="link" href="#proyectos">Proyectos</a>
+        <a class="link" href="https://github.com/NestorValencia" target="_blank" rel="noreferrel">Mi GitHub</a><!--enlaces internos-->
       </nav>
 
     </header> 
 
-    <main>
+    <dialog id="dialog">
+      <h1>Sabia que puedes habrir una modal asi</h1>
+      <p>Y es totalmente nativo!</p>
+      <button id="hiden">Cerrar modal</button>
+    </dialog>
+
+    <button id="show">Ver mas informacion</button>
+
+    <script>
+      window.show.addEventListener('click',() => {
+        window.dialog.showModal()
+      })
+      window.hiden.addEventListener('click', ()=>{
+        window.dialog.close()
+      })
+    </script>
+
+  <main>
 
     <p>
       Hola me llamo Néstor y soy un estudiante de educacion media que ha
@@ -58,8 +119,8 @@
     <h2 id="experiencia">Experiencia</h2>
     <ul>
       <li>En el area de desarrollo web no tencgo experiencia por el momento</li>
-      <li></li>
-      <li></li>
+      <li>Relleno</li>
+      <li>Relleno 2</li>
     </ul>
     <a download="" href="/img/yo.png">
     <img
@@ -162,7 +223,5 @@
     </section>
   </main>
     <footer id="footer">Copyright &copy; 2023 - El portafolio que le volo la cabeza a Hitler</footer>
-
-    <a href="mailto:nestoradrielvalenciaperez@gmail.com">Enviame un correo</a>
   </body>
 </html>
